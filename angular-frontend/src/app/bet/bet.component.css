@@ -1,0 +1,159 @@
+.bet-panel {
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 0.85rem;
+  background: rgba(18, 20, 12, 0.48);
+}
+
+.bet-heading,
+.new-tip-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.bet-heading h3,
+.new-tip-heading h4 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.bet-heading p {
+  margin: 0.15rem 0 0;
+  color: rgba(255, 255, 255, 0.67);
+  font-size: 0.8rem;
+}
+
+.tip-count {
+  color: #d9ecb0;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.bet-table-wrap {
+  max-height: 360px;
+  overflow: auto;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 0.65rem;
+}
+
+.bet-table {
+  min-width: 620px;
+  margin: 0;
+  color: #f9fbf4;
+  --bs-table-bg: transparent;
+  --bs-table-color: #f9fbf4;
+  --bs-table-border-color: rgba(255, 255, 255, 0.13);
+}
+
+.bet-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #354b1b;
+  color: #eff7df;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.bet-table tbody tr:hover > * {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.07);
+}
+
+.tip-id {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.76rem;
+}
+
+.number-pill {
+  display: inline-grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border-radius: 50%;
+  background: #e8f3cf;
+  color: #354b1b;
+  font-weight: 800;
+}
+
+.number-input {
+  width: 4.1rem;
+  min-width: 3.6rem;
+}
+
+.row-actions {
+  display: flex;
+  gap: 0.35rem;
+  white-space: nowrap;
+}
+
+.empty-row,
+.bet-status {
+  padding: 1rem !important;
+  color: rgba(255, 255, 255, 0.72);
+  text-align: center;
+}
+
+.new-tip-form {
+  margin-top: 1rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.new-tip-heading span {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.75rem;
+  text-align: right;
+}
+
+.number-fields {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(54px, 1fr)) auto;
+  align-items: end;
+  gap: 0.55rem;
+}
+
+.number-field span {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 0.72rem;
+}
+
+.number-field input {
+  min-width: 0;
+}
+
+.add-button {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .number-fields {
+    grid-template-columns: repeat(5, minmax(45px, 1fr));
+  }
+
+  .add-button {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .bet-panel {
+    padding: 0.7rem;
+  }
+
+  .number-fields {
+    grid-template-columns: repeat(3, minmax(55px, 1fr));
+  }
+
+  .add-button {
+    grid-column: 1 / -1;
+  }
+}
